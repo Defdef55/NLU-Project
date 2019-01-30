@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage[utf-8]{}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+\title{\bf« Natural Language Understanding (NLU) »: développer un site Web pour les enfants}
+\author{Groupe B}
+\date{Semestre de printemps}
+
+\begin{document}
+
+\maketitle
+\section{Contexte du projet}
+L'objectif de ce projet est de concevoir un forum adapté à des enfants afin qu'ils puissent communiquer entre eux ou avec leur professeurs sans subir de harcèlement et sans être exposés à des propos violents ou choquants. Une certaine sécurité devra être mise en place pour pouvoir facilement contacter les administrateurs en cas de besoin.
+\section{Besoin Fonctionnel}
+\subsection{Inscription}
+Les enfants doivent s'inscrire avant de pouvoir se connecter. Pour s'inscrire les élèves doivent fournir un identifiant, un mot de passe, une adresse mail personnelle et l'adresse mail de leur parent.
+L'adresse mail de leur parent devra être vérifiée dans une table contenant les adresses mail de tous les parents. Si aucune adresse ne correspond, l'élève ne pourra pas s'inscrire. 
+En cas de perte de compte ou d'échec de connexion à plusieurs reprises, l'enfant devra répondre à une question secrète.
+\subsection{Connexion}
+Si un enfant tente de se connecter à plusieurs reprises mais se trompe dans son identifiant ou mot de passe, un mail sera envoyé au parent en les avertissant d'une éventuelle tentative malveillante de connexion. Après un certain nombre de tentative de connexion, l'enfant pourra répondre à la question secrète qui lui est associée pour pouvoir récupérer son compte et se connecter.
+Lorsqu'un élève est connecté, son nom d'utilisateur doit être visible dans la barre de navigation.
+\subsection{Modération}
+Les modérateurs pourront avoir accès à plus de fonctionnalité, ils pourront s'ils considèrent un message inapproprié le supprimer.
+\subsection{Règles d'utilisation}
+Le forum devra posséder une charte de bon usage qui détaillera les règles d'utilisation. Si un enfant ne respecte pas ces règles à plusieurs reprises il recevra un avertissement.
+\subsection{Communication}
+Les enfants pourront discuter entre eux grâce à une messagerie privée. Ils pourront aussi avoir accès à des ressources pédagogiques via les différentes sections du forum. 
+S'ils ont besoin, ils pourront contacter un administrateur.
+\section{Contraintes}
+\subsection{Inscription}
+Deux élèves ne pourront pas s'inscrire avec le même identifiant (ou la même adresse mail). L'identifiant et le mot de passe doivent contenir au moins 3 caractères sinon ils seront considéré comme invalides.
+Une fois un enfant inscrit, il pourra choisir à tout moment de modifier son mot de passe en se rendant dans son profil.
+\subsection{Emploi de texte non approprié}
+Pour empêcher insultes et textes choquants et/ou inappropriés, il faut mettre au point un filtrage du contenu de messages. Ainsi, les propos interdits sur le forum pourront être rassemblés dans une liste noire. L'envoi de liens pourra éventuellement être bloqué.
+Il faudra créer un système permettant d'alerter les administrateurs ou les parents si une règle d'utilisation n'est pas respectée à plusieurs reprises. Les enfants qui ne respectent pas certaines règles recevront un avertissement. Au bout d'un certain nombre d'avertissements, un administrateur est contacté.
+
+\section{Outils utilisés}
+
+Langages de programmation : PHP, Javascript, Python
+
+Bibliothèques pour l’application Web: Bootstrap, PDO, DOM, JQuery
+
+Bibliothèque logicielle NLU: Natural Language Toolkit (NLTK)
+
+Base de données : MySQL, PHPMyAdmin
+\end{document}
